@@ -1,0 +1,57 @@
+package com.empresa.jcc;
+
+public class Empleado {
+	
+	String id, nombre, apellido;
+	private double horasTrabajadas;
+	private double horaSueldo;
+	private double salario;
+	
+	Empleado(String id, String nombre, String apellido)	{
+		
+		this.id = id;
+		this.nombre = nombre;
+		this.apellido = apellido;
+	}
+	
+	public void sethorastrabajadas(double horasTrabajadas) {
+		
+		if(horasTrabajadas>500)	{
+			this.horasTrabajadas = -1;
+		}
+		else {
+			this.horasTrabajadas = horasTrabajadas;
+		}
+	}
+	
+	public void sethoraSueldo(double horaSueldo) {
+		
+		if(horaSueldo>1500)	{
+			this.horaSueldo = -1;
+		}
+		else	{
+		this.horaSueldo = horaSueldo;
+		}
+	}
+
+	public void calcularSalario()	{
+		
+		salario = horasTrabajadas*horaSueldo;
+	}
+	
+	public double gethorasTrabajadas() {
+		
+		return horasTrabajadas;
+	}
+	
+	public double gethoraSueldo() {
+		
+		return horaSueldo;
+	}
+	
+	public double getSalario() {
+		
+		return salario;
+	}
+
+}
